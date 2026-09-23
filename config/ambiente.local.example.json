@@ -1,0 +1,11 @@
+{
+  "territorio": "manaus",
+  "raiz_dados": "CAMINHO_LOCAL_DO_PROJETO",
+  "fontes": {
+    "escolas": "01 BaseDadosGeoExterna/escolas.gdb",
+    "lotes": "01 BaseDadosGeoExterna/LOTES.gdb",
+    "setores": "01 BaseDadosGeoExterna/SETORES.gdb",
+    "bairros_zonas": "01 BaseDadosGeoExterna/BAIRROS E ZONAS MANAUS.gpkg",
+    "localidades": "01 BaseDadosGeoExterna/LOCALIDADES MANAUS.gpkg"
+  }
+}

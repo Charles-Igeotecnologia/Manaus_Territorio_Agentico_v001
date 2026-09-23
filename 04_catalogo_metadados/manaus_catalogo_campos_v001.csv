@@ -1,0 +1,13 @@
+﻿id;id_camada;nome_origem;nome_padronizado;tipo_origem;descricao;sensivel;regra_tratamento
+1;cam_001;OBJECTID;id_origem;INTEGER;Identificador original;0;preservar
+2;cam_001;NOME_BAIRR;nome_bairro;TEXT;Nome do bairro;0;padronizar texto
+3;cam_001;ZONAS;zona;TEXT;Zona administrativa;0;validar dominio
+4;cam_002;NOME_LOCAL;nome_localidade;TEXT;Nome da localidade;0;padronizar texto
+5;cam_003;INEP;codigo_inep;REAL;Codigo INEP;0;converter para texto e preservar zeros
+6;cam_003;ESCOLA;nome_escola;TEXT;Nome da unidade;0;padronizar texto
+7;cam_003;GESTOR;gestor;TEXT;Nome do gestor;1;restringir acesso
+8;cam_003;CONTATO;contato;TEXT;Contato institucional ou pessoal;1;restringir acesso
+9;cam_003;TELEFONE;telefone;TEXT;Telefone;1;restringir acesso
+10;cam_004;CGL;cgl;TEXT;Codigo geral do lote;0;validar unicidade
+11;cam_005;CD_SETOR;codigo_setor;TEXT;Codigo do setor censitario;0;preservar como texto
+12;cam_005;TOTAL_PESSOAS;total_pessoas;REAL;Populacao total;0;validar com fonte IBGE

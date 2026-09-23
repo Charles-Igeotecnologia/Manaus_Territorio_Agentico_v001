@@ -1,0 +1,6 @@
+﻿id_camada;id_fonte;nome_origem;nome_proposto;grupo_tematico;geometria;quantidade_registros;crs_epsg;crs_original;classificacao_acesso;situacao_validacao;observacoes
+cam_001;fonte_002;BAIRROS E ZONAS_bairros_e_zonas;ref_bairros_zonas_manaus;referencia_territorial;POLYGON;64;4674;SIRGAS 2000 sem autoridade EPSG declarada;interna;pendente;Confirmar fonte, data e validade geometrica.
+cam_002;fonte_003;LOCALIDADES MANAUS_LOCALIDADES4_shp;ref_localidades_manaus;referencia_territorial;POLYGON;663;4674;SIRGAS 2000 sem autoridade EPSG declarada;interna;pendente;Confirmar conceito de localidade e sobreposicoes.
+cam_003;fonte_004;Escolas;edu_escolas_manaus;rede_educacional;POINT;544;;semef_SIR2000 personalizado: TM, meridiano -60, FE 400000, FN 5000000;restrita;pendente_crs_e_sensibilidade;Nao converter para EPSG:31980 sem teste e validacao visual.
+cam_004;fonte_005;LOTES;cad_lotes_manaus;cadastro_territorial;MULTIPOLYGON;442463;;semef_SIR2000 personalizado: TM, meridiano -60, FE 400000, FN 5000000;restrita;pendente_crs_e_escopo;Integrar somente campos e recortes necessarios.
+cam_005;fonte_006;SETORES_CENSITARIOS_2022;ref_setores_censitarios_manaus_2022;referencia_territorial;MULTIPOLYGON;3210;;semef_SIR2000 personalizado: TM, meridiano -60, FE 400000, FN 5000000;interna;pendente_crs;Validar codigos IBGE e compatibilidade com malha oficial.

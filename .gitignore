@@ -1,0 +1,34 @@
+# Originais e dados de trabalho
+01_armazenamento/00_recebimento/**
+01_armazenamento/01_originais/**
+02_tratamento/00_triagem/**
+02_tratamento/01_em_processamento/**
+02_tratamento/02_intermediarios/**
+02_tratamento/03_logs/**
+03_base_geo/*.gpkg
+03_base_geo/backups/**
+06_produtos/**
+07_entregas/**
+
+# Formatos institucionais ou pesados
+*.gdb/
+*.rar
+*.zip
+*.7z
+*.xlsx
+*.xls
+*.ods
+*.qgz
+*.qgs
+
+# Temporarios
+*.tmp
+*.temp
+*.lock
+*.gpkg-wal
+*.gpkg-shm
+__pycache__/
+
+config/ambiente.local.json
+
+05_validacao/relatorios/manaus_validacao_migracao_local_v001.txt

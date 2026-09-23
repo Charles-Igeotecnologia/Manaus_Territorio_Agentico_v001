@@ -1,0 +1,55 @@
+{
+  "project": "Manaus Territorio Agentico v001",
+  "status": "candidato_nao_publicado",
+  "file": "manaus_base_consulta_v001.gpkg",
+  "sha256": "fe80c68a7e18c75e87f7a2a811f51a9251f498ebe4c67e6c08d53ae744e5e18e",
+  "crs": "EPSG:4674",
+  "created": "2026-09-23T20:29:40Z",
+  "layers": [
+    {
+      "name": "ref_bairros_zonas_manaus",
+      "records": 64,
+      "description": "Bairros e zonas de Manaus para referencia territorial.",
+      "access": "publicacao_condicionada"
+    },
+    {
+      "name": "ref_localidades_manaus",
+      "records": 663,
+      "description": "Localidades de Manaus para referencia territorial.",
+      "access": "publicacao_condicionada"
+    },
+    {
+      "name": "edu_escolas_manaus",
+      "records": 544,
+      "description": "Unidades educacionais sem contatos, gestores, contratos ou processos.",
+      "access": "publicacao_condicionada"
+    },
+    {
+      "name": "ref_setores_censitarios_manaus_2022",
+      "records": 3210,
+      "description": "Setores censitarios 2022 com indicadores agregados.",
+      "access": "publicacao_condicionada"
+    }
+  ],
+  "excluded": {
+    "cad_lotes_manaus": "volume e sensibilidade cadastral; requer decisao tecnica",
+    "school_fields": [
+      "contato",
+      "contratado",
+      "created_user",
+      "endereco_locador",
+      "gestor",
+      "last_edited_user",
+      "link_siged",
+      "numero_contrato_ano_ta",
+      "observacao_contrato",
+      "processo_protus",
+      "processo_siged",
+      "ramal_corporativo",
+      "setor_atual",
+      "telefone",
+      "valor_anual",
+      "valor_mensal"
+    ]
+  }
+}

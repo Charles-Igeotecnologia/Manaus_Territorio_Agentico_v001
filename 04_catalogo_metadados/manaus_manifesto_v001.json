@@ -1,0 +1,15 @@
+{
+  "projeto": "Territorio Agentico Manaus",
+  "versao": "0.1.1",
+  "codigo_versao": "v001",
+  "gerado_em": "2026-09-23T19:58:53Z",
+  "geopackage": "03_base_geo/manaus_base_geo_v001.gpkg",
+  "fontes_catalogadas": 8,
+  "camadas_identificadas": 5,
+  "campos_iniciais": 12,
+  "regras_registradas": 8,
+  "situacao": "pre_validacao",
+  "ambiente_ativo": "local",
+  "configuracao_local": "config/ambiente.local.json",
+  "repositorio_publicacao": "https://github.com/Charles-Igeotecnologia/Manaus_Territorio_Agentico_v001.git"
+}

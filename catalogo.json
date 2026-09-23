@@ -1,0 +1,63 @@
+{
+  "projeto": "Territorio Agentico Manaus",
+  "territorio": "manaus",
+  "uf": "AM",
+  "versao": "0.1.1",
+  "codigo_versao": "v001",
+  "situacao": "ambiente_local_ativo_aguardando_validacao_dos_dados",
+  "crs": {
+    "geografico_padrao": "EPSG:4674",
+    "metrico_recomendado": "EPSG:31980",
+    "regra": "reprojetar somente apos validar o CRS de origem"
+  },
+  "base_geo": "03_base_geo/manaus_base_geo_v001.gpkg",
+  "catalogos": {
+    "fontes": "04_catalogo_metadados/manaus_catalogo_fontes_v001.csv",
+    "camadas": "04_catalogo_metadados/manaus_catalogo_camadas_v001.csv",
+    "manifesto": "04_catalogo_metadados/manaus_manifesto_v001.json"
+  },
+  "principios": [
+    "preservar_originais",
+    "catalogar_antes_de_integrar",
+    "registrar_linhagem",
+    "proteger_dados_sensiveis",
+    "validacao_tecnica_humana_obrigatoria"
+  ],
+  "ambientes": {
+    "trabalho_local": {
+      "configuracao": "config/ambiente.local.json",
+      "modelo": "config/ambiente.local.example.json",
+      "uso": "processamento_ativo",
+      "prioridade": 1
+    },
+    "publicacao_github": {
+      "repositorio": "https://github.com/Charles-Igeotecnologia/Manaus_Territorio_Agentico_v001.git",
+      "uso": "documentacao_scripts_e_base_sanitizada",
+      "prioridade": 2
+    }
+  },
+  "politica_armazenamento": [
+    "usar caminhos locais somente em config/ambiente.local.json",
+    "nao versionar originais, credenciais ou dados restritos",
+    "publicar apenas a base sanitizada validada",
+    "registrar hash e versao de cada pacote publicado"
+  ],
+  "atualizado_em": "2026-09-23T20:29:40Z",
+  "base_consulta_github": {
+    "arquivo": "dados_publicados/manaus_base_consulta_v001.gpkg",
+    "catalogo": "dados_publicados/manaus_base_consulta_v001_catalogo.json",
+    "status": "candidato_nao_publicado",
+    "crs": "EPSG:4674",
+    "camadas": [
+      "ref_bairros_zonas_manaus",
+      "ref_localidades_manaus",
+      "edu_escolas_manaus",
+      "ref_setores_censitarios_manaus_2022"
+    ],
+    "exclusoes": [
+      "lotes_detalhados",
+      "dados_pessoais",
+      "dados_contratuais"
+    ]
+  }
+}
