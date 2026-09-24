@@ -1,0 +1,20 @@
+{
+  "versao": "v002",
+  "referencia_geografica_interoperabilidade": "EPSG:4674",
+  "crs_institucional_projetado": {
+    "nome": "RTM/SIRGAS 2000",
+    "status": "aguardando_validacao_matematica",
+    "parametros": null,
+    "regra": "nao inferir nem automatizar transformacoes ate validar a definicao oficial/controlada contra a fonte institucional e referencia tecnica aplicavel"
+  },
+  "regras": [
+    "preservar_crs_original",
+    "validar_crs_antes_de_reprojetar",
+    "declarar_crs_origem_e_destino",
+    "declarar_motivo_da_transformacao",
+    "preservar_geometria_original",
+    "usar_crs_projetado_validado_para_operacoes_metricas",
+    "nao_impor_utm_20s_ou_utm_21s_como_regra_geral_para_manaus"
+  ],
+  "principio": "transformacao espacial sempre declarada e rastreavel"
+}
