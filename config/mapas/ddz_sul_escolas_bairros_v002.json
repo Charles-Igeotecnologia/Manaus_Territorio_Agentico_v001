@@ -1,0 +1,38 @@
+{
+  "id": "ddz_sul_escolas_bairros",
+  "versao": "v002",
+  "titulo": "DDZ Sul – Escolas e bairros de abrangência",
+  "fonte": {
+    "gpkg": "dados_publicados/manaus_base_consulta_v001.gpkg",
+    "camada_escolas": "edu_escolas_manaus",
+    "camada_bairros": "ref_bairros_zonas_manaus"
+  },
+  "selecao": {
+    "escolas": {"campo": "ddz", "valor": "Sul"},
+    "bairros": {
+      "metodo": "relacao_espacial_com_escolas_selecionadas",
+      "regra": "usar_geometria_existente_sem_inferencia"
+    }
+  },
+  "representacao": {
+    "escolas": {"rotulos": false},
+    "bairros": {"preenchimento": false, "somente_contorno": true, "rotulos": true}
+  },
+  "elementos_cartograficos": {
+    "titulo": true,
+    "legenda": true,
+    "escala_grafica": true,
+    "norte": true,
+    "crs": true,
+    "fonte_dados": true,
+    "autoria": true,
+    "data": true
+  },
+  "governanca": {
+    "alterar_base_geo": false,
+    "inferir_crs": false,
+    "inferir_geometria": false,
+    "registrar_auditoria": true
+  },
+  "status": "especificacao_aprovada_para_teste"
+}
