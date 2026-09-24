@@ -1,0 +1,60 @@
+name: Teste cartografico v0.02
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [evolucao-v002]
+    paths:
+      - '02_tratamento/04_scripts/**'
+      - 'config/layouts/**'
+      - 'dados_publicados/**'
+      - '.github/workflows/teste_cartografico_v002.yml'
+
+jobs:
+  validar-mapa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Dependencias geoespaciais
+        run: |
+          python -m pip install --upgrade pip
+          pip install geopandas matplotlib pyogrio
+
+      - name: Validar GeoPackage e espacializar todas as escolas
+        run: |
+          mkdir -p 06_produtos/testes/v002
+          python 02_tratamento/04_scripts/executor_geoespacial_v002.py \
+            espacializar-escolas \
+            --geojson 06_produtos/testes/v002/escolas_v002.geojson \
+            > 06_produtos/testes/v002/relatorio_espacializacao.json
+
+      - name: Gerar mapa tecnico PDF
+        run: |
+          python 02_tratamento/04_scripts/renderizador_cartografico_v002.py \
+            --geojson 06_produtos/testes/v002/escolas_v002.geojson \
+            --layout config/layouts/abnt_tecnico_v002.json \
+            --saida 06_produtos/testes/v002/mapa_escolas_abnt_v002.pdf \
+            --titulo 'Escolas Municipais de Manaus - Teste v0.02' \
+            > 06_produtos/testes/v002/relatorio_renderizacao.json
+
+      - name: Verificar produtos
+        run: |
+          test -s 06_produtos/testes/v002/escolas_v002.geojson
+          test -s 06_produtos/testes/v002/mapa_escolas_abnt_v002.pdf
+          test -s 06_produtos/testes/v002/relatorio_espacializacao.json
+          test -s 06_produtos/testes/v002/relatorio_renderizacao.json
+
+      - name: Guardar artefato do teste
+        uses: actions/upload-artifact@v4
+        with:
+          name: teste-cartografico-v002-${{ github.run_number }}
+          path: 06_produtos/testes/v002/
+          retention-days: 30
+          if-no-files-found: error
