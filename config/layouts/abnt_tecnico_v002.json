@@ -1,0 +1,44 @@
+{
+  "id": "abnt_tecnico",
+  "versao": "v002",
+  "descricao": "Preset de referencia para produtos cartograficos tecnicos e institucionais, editavel sem alterar dados ou geometria.",
+  "principios": {
+    "dados_separados_da_apresentacao": true,
+    "geometria_original_preservada": true,
+    "layout_editavel": true,
+    "abnt_como_referencia_documental": true,
+    "convencoes_cartograficas_por_referencia_tecnica": true
+  },
+  "pagina": {
+    "formato_padrao": "A4",
+    "orientacao_padrao": "paisagem",
+    "permitir_alteracao": true
+  },
+  "elementos": {
+    "titulo": true,
+    "legenda": true,
+    "escala_grafica": true,
+    "norte_quando_pertinente": true,
+    "crs_sistema_referencia": true,
+    "fonte_dados": true,
+    "autoria": true,
+    "data": true,
+    "identificacao_institucional": true,
+    "observacoes_tecnicas": true
+  },
+  "personalizavel": [
+    "titulo",
+    "legenda",
+    "rotulos",
+    "simbologia",
+    "tamanho_simbolos",
+    "transparencia",
+    "mapa_base",
+    "escala",
+    "orientacao",
+    "logos",
+    "margens",
+    "formato_saida"
+  ],
+  "regra": "alteracoes de layout nunca modificam a geometria nem os atributos autoritativos da Base Geo"
+}
